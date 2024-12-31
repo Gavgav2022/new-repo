@@ -1,0 +1,31 @@
+function q(t){const e=document.createElement("div");e.className="toast",e.textContent=t,document.body.appendChild(e),setTimeout(()=>{e.style.opacity="0",setTimeout(()=>{e.remove()},500)},2e3)}const d=t=>parseFloat(t).toFixed(2);function N(t){return`
+      <div class='cart-product-card' data-type='cart-product' 
+           data-id='${t.productName}' 
+           data-img='${t.productImg}' 
+           data-name='${t.productName}' 
+           data-price='${t.productPrice}' 
+           data-quantity='${t.productQuantity}'>
+        <picture class='cart-product-card__picture'>
+          <img src='${t.productImg}' alt='${t.productName}' loading='lazy' width='160' height='100'>
+        </picture>
+        <div class='cart-product-card__body'>
+          <button class='cart-product-card__remove' data-product-remove type='button'>
+            <div class='sr-only'>Remove product</div>
+          </button>
+          <h3 class='cart-product-card__title'>${t.productName}</h3>
+          <div class='cart-controls'>
+            <div class='cart-controls__quantity'>
+              <button class='cart-controls__btn' data-action='decrease' ${t.productQuantity>1?"":"disabled"}>
+                <span class='sr-only'>decrease</span>
+              </button>
+              <input type='text' value='${t.productQuantity}' min='1' class='cart-controls__input'>
+              <button class='cart-controls__btn' data-action='increase'>
+                <span class='sr-only'>increase</span>
+              </button>
+            </div>
+          </div>
+          <div class="cart-product-card__price">
+            $<span data-total-price="${t.productPrice*t.productQuantity}">${d(t.productPrice*t.productQuantity)}</span>
+          </div>
+        </div>
+      </div>`}function b(t){const e=t.querySelector(".cart-controls__input"),r=t.querySelector('[data-action="decrease"]'),a=t.querySelector('[data-action="increase"]'),c=t.closest('[data-type="product"], [data-type="cart-product"]'),s=a.getAttribute("data-event-handler"),u=r.getAttribute("data-event-handler");s&&a.removeEventListener("click",window[s]),u&&r.removeEventListener("click",window[u]);const i=()=>{const v=parseInt(e.value)||1;if(c.setAttribute("data-quantity",v),c.getAttribute("data-type")==="cart-product"){const A=c.getAttribute("data-name");let I=JSON.parse(localStorage.getItem("products"))||[];const _=I.find(m=>m.productName===A);if(_){_.productQuantity=v,localStorage.setItem("products",JSON.stringify(I)),g();const m=c.querySelector("[data-total-price]");if(m){const h=parseFloat(c.getAttribute("data-price"))*v;m.textContent=d(h),m.setAttribute("data-total-price",h)}C();const E=new CustomEvent("quantityChanged");document.dispatchEvent(E)}}},l=()=>{parseInt(e.value)>1?r.removeAttribute("disabled"):r.setAttribute("disabled","disabled")};l();const o=()=>{e.value=parseInt(e.value)+1,i(),l()},n=()=>{parseInt(e.value)>1&&(e.value=parseInt(e.value)-1,i(),l())};a.addEventListener("click",o),r.addEventListener("click",n);const p=`increaseHandler_${Math.random().toString(36).substr(2,9)}`,f=`decreaseHandler_${Math.random().toString(36).substr(2,9)}`;window[p]=o,window[f]=n,a.setAttribute("data-event-handler",p),r.setAttribute("data-event-handler",f),e.addEventListener("input",()=>{(parseInt(e.value)<1||isNaN(e.value))&&(e.value=1),i(),l()})}function C(){const t=document.querySelector("[data-cart-total]");if(t){const r=(JSON.parse(localStorage.getItem("products"))||[]).reduce((a,c)=>a+c.productPrice*c.productQuantity,0);t.textContent=d(r)}}function y(){const t=document.querySelector(".cart-body__list"),e=document.querySelector(".cart");if(!t||!e)return;const r=JSON.parse(localStorage.getItem("products"))||[];t.innerHTML="",r.length===0?e.classList.add("empty"):(e.classList.remove("empty"),r.forEach(a=>{const c=document.createElement("li");c.innerHTML=N(a),t.appendChild(c);const s=c.querySelector(".cart-controls");s&&b(s)})),C()}function g(){const e=(JSON.parse(localStorage.getItem("products"))||[]).reduce((a,c)=>a+c.productQuantity,0);document.querySelectorAll("[data-cart-counter]").forEach(a=>{a.textContent=e,a.setAttribute("data-cart-counter",e)})}function S(){const t=document.querySelector(".order-summary__list"),e=document.querySelector("[data-subtotal-sum]"),r=document.querySelector("[data-shipping-sum]"),a=document.querySelector("[data-tax-sum]"),c=document.querySelector("[data-total-sum]");if(!t||!e||!r||!a||!c){console.warn("Some required elements for order summary are missing");return}const s=JSON.parse(localStorage.getItem("products"))||[];t.innerHTML="";const u=s.reduce((o,n)=>o+n.productPrice*n.productQuantity,0);s.forEach(o=>{if(!o.productPrice||!o.productQuantity){console.warn("Invalid product data:",o);return}const n=document.createElement("li");n.innerHTML=N(o),t.appendChild(n);const p=n.querySelector(".cart-controls");p&&b(p)});const i=u*.1,l=u+80+i;e.textContent=d(u),r.textContent=d(80),a.textContent=d(i),c.textContent=d(l)}function P(t){let e=JSON.parse(localStorage.getItem("products"))||[];const r=e.findIndex(a=>a.productName===t.productName);r>-1?e[r].productQuantity+=t.productQuantity:e.push(t),localStorage.setItem("products",JSON.stringify(e)),g(),y(),S()}function L(t){const e=t.getAttribute("data-name"),r=t.getAttribute("data-img")||"",a=parseFloat(t.getAttribute("data-price"))||0,c=parseInt(t.getAttribute("data-quantity"))||1;return{productName:e,productImg:r,productPrice:a,productQuantity:c}}document.addEventListener("click",function(t){if(t.target.matches('[data-btn="add-to-cart"]')){const e=t.target.closest('[data-type="product"]');if(e){const r=L(e);P(r),e.setAttribute("data-quantity","1");const a=e.querySelector(".cart-controls__input");a&&(a.value="1")}q("Item added to cart")}if(t.target.matches("[data-product-remove]")){const e=t.target.closest('[data-type="cart-product"]');if(e){const r=e.getAttribute("data-name");let a=JSON.parse(localStorage.getItem("products"))||[];a=a.filter(c=>c.productName!==r),localStorage.setItem("products",JSON.stringify(a)),g(),y(),S()}q("Item removed from cart")}});document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('[data-type="product"] .cart-controls, [data-type="cart-product"] .cart-controls').forEach(b),g(),y(),S()});document.addEventListener("quantityChanged",()=>{y(),S()});

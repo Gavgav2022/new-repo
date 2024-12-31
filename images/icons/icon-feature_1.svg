@@ -1,0 +1,20 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_90_134)">
+<path d="M25 0.976562C11.7322 0.976562 0.976562 11.7322 0.976562 25V32.3541H4.89873V28.4319V25C4.89873 13.8984 13.8983 4.89873 25 4.89873C36.1016 4.89873 45.1012 13.8983 45.1012 25V28.4319V32.3541H49.0234V25C49.0234 11.7322 38.2678 0.976562 25 0.976562Z" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.80142 39.218H7.82837C6.2103 39.218 4.89868 37.9063 4.89868 36.2883V28.4199C4.89868 26.802 6.2103 25.4902 7.82837 25.4902H9.80142V39.218Z" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.6848 23.5293H9.80151V41.1792H15.6848V23.5293Z" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.1985 39.218H42.1715C43.7896 39.218 45.1012 37.9063 45.1012 36.2883V28.4199C45.1012 26.802 43.7896 25.4902 42.1715 25.4902H40.1985V39.218Z" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.3152 41.1787H40.1985V23.5288H34.3152V41.1787Z" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49.0234 32.3545V44.1211C49.0234 45.7457 47.7064 47.0627 46.0818 47.0627H28.9221" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.9612 49.0238H23.039C21.9559 49.0238 21.0779 48.1458 21.0779 47.0627C21.0779 45.9796 21.9559 45.1016 23.039 45.1016H26.9612C28.0443 45.1016 28.9223 45.9796 28.9223 47.0627C28.9222 48.1458 28.0442 49.0238 26.9612 49.0238Z" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="21.0778" cy="15.1943" r="0.976562" fill="#6BD340"/>
+<circle cx="24.9999" cy="15.1943" r="0.976562" fill="#6BD340"/>
+<circle cx="28.9221" cy="15.1943" r="0.976562" fill="#6BD340"/>
+<path d="M32.8444 10.7822H17.1555V19.6071H21.0778V22.5488L25 19.6071H32.8444V10.7822Z" stroke="#6BD340" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_90_134">
+<rect width="50" height="50" fill="white"/>
+</clipPath>
+</defs>
+</svg>

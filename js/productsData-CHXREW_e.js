@@ -1,0 +1,118 @@
+import { c as createComponent, r as renderTemplate, m as maybeRenderHead } from './astro/server-C38GGGvR.js';
+import 'kleur/colors';
+import 'html-escaper';
+import 'clsx';
+/* empty css               */
+
+const $$Advantages = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section class="advantages"> <div class="container"> <ul class="advantages__list"> <li class="advantages__item support"> <span class="advantages__content"> <span class="advantages__title">Based Support</span> <span class="advantages__subtitle">LiveChat, Call, Email</span> </span> </li> <li class="advantages__item warranty"> <span class="advantages__content"> <span class="advantages__title">12 Year Warranty</span> <span class="advantages__subtitle">Full battery Coverage</span> </span> </li> <li class="advantages__item shipping"> <span class="advantages__content"> <span class="advantages__title">Fast Shipping</span> <span class="advantages__subtitle">Shipping Fast</span> </span> </li> <li class="advantages__item battery"> <span class="advantages__content"> <span class="advantages__title">Safest Batteries</span> <span class="advantages__subtitle">Reliable LFP Chemistry</span> </span> </li> </ul> </div> </section>`;
+}, "E:/__work/_freelance/0_imecar/src/components/Base/Advantages/Advantages.astro", void 0);
+
+const $$SubscribeForm = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section class="subscribe" id="contact"> <div class="container"> <div class="subscribe__inner"> <div class="subscribe__content"> <h2 class="title-h2 subscribe__title">Be the first to know</h2> <div class="subscribe__text"> <p>Get access to exclusive deals, hear about new products before anyone else, and enjoy tips, tricks, and DIY hacks from our community of experts</p> </div> <form action="" class="subscribe__form"> <label class="sr-only" for="email">Type your email</label> <div class="form-group"> <input class="subscribe__input" id="email" type="email" placeholder="Type your email" name="subscribe[email]" required> <button class="btn subscribe__btn" type="submit">Yes -Sign me up</button> </div> </form> </div> </div> </div> </section>`;
+}, "E:/__work/_freelance/0_imecar/src/components/Base/SubscribeForm/SubscribeForm.astro", void 0);
+
+const batteriesData =  [
+  {	
+		id: '001',
+    model: "L-FLEX 5.4 kWh Basic",
+    price: 1000,
+    nominalVoltage: "51.52 V",
+    capacity: "105 Ah",
+    batteryPackEnergy: "5.4 kWh",
+    batteryLife: "2000 Cycle",
+    length: "400 mm / 15.75 inc",
+    width: "391 mm / 15.39 inc",
+    height: "244 mm / 9.61 inc",
+    weight: "45 kg / 99.21 Ibs",
+    bluetooth: "No",
+		cell: 'LFP',
+		bodyMaterial: 'Aluminum with Cooling Channel',
+		warranty: '12 years',
+		badge: "",
+		description: "This is a modern lithium-ion battery designed for maximum efficiency and long-lasting use. Thanks to its advanced technology, it guarantees stable operation of the golf cart even in the most demanding conditions.",
+		mainImgName: 'battery-1',
+		smallImageName: 'battery-1-sm',
+		transparentImageName: 'battery-1-transparent',
+		paymentPageLink: 'https://square.link/u/46W012D4',
+		paymentPage: '/checkout',
+    productPageUrl: 'l-flex-5-4-kwh-basic',
+  },
+  {
+		id: '002',
+    model: "L-FLEX 5.4 kWh Pro",
+    price: 2000,
+    nominalVoltage: "51.52 V",
+    capacity: "105 Ah",
+    batteryPackEnergy: "5.4 kWh",
+    batteryLife: "2000 Cycle",
+    length: "400 mm / 15.75 inc",
+    width: "391 mm / 15.39 inc",
+    height: "244 mm / 9.61 inc",
+    weight: "45 kg / 99.21 Ibs",
+    bluetooth: "Yes",
+		cell: 'LFP',
+		bodyMaterial: 'Aluminum with Cooling Channel',
+		warranty: '12 years',
+		badge: "",
+		description: "This is a modern lithium-ion battery designed for maximum efficiency and long-lasting use. Thanks to its advanced technology, it guarantees stable operation of the golf cart even in the most demanding conditions.",
+		mainImgName: 'battery-1',
+		smallImageName: 'battery-1-sm',
+		transparentImageName: 'battery-1-transparent',
+		paymentPageLink: 'https://square.link/u/0lPXgvRc',
+		paymentPage: '/checkout',
+    productPageUrl: 'l-flex-5-4-kwh-pro',
+  },
+  {
+		id: '003',
+    model: "L-FLEX 10.5 kWh Max",
+    price: 3000,
+    nominalVoltage: "51.2 V",
+    capacity: "180 Ah",
+    batteryPackEnergy: "10.5 kWh",
+    batteryLife: "2000 Cycle",
+    length: "665 mm / 26.18 inc",
+    width: "391 mm / 15.39 inc",
+    height: "244 mm / 9.61 inc",
+    weight: "83 kg / 182.98 Ibs",
+    bluetooth: "Yes",
+		cell: 'LFP',
+		bodyMaterial: 'Aluminum with Cooling Channel',
+		warranty: '12 years',
+		badge: "Top sales",
+		description: "This is a modern lithium-ion battery designed for maximum efficiency and long-lasting use. Thanks to its advanced technology, it guarantees stable operation of the golf cart even in the most demanding conditions.",
+		mainImgName: 'battery-2',
+		transparentImageName: 'battery-2-transparent',
+		smallImageName: 'battery-2-sm',
+		paymentPageLink: 'https://square.link/u/cfOfyKCz',
+		paymentPage: '/checkout',
+    productPageUrl: 'l-flex-10-5-kwh-max',
+  },
+  {
+		id: '004',
+    model: "L-FLEX 10.5 kWh Ultra",
+    price: 4000,
+    nominalVoltage: "51.2 V",
+    capacity: "206 Ah",
+    batteryPackEnergy: "10.5 kWh",
+    batteryLife: "2000 Cycle",
+    length: "665 mm / 26.18 inc",
+    width: "391 mm / 15.39 inc",
+    height: "244 mm / 9.61 inc",
+    weight: "83 kg / 182.98 Ibs",
+    bluetooth: "Yes",
+		cell: 'LFP',
+		bodyMaterial: 'Aluminum with Cooling Channel',
+		warranty: '12 years',
+		badge: "",
+		description: "This is a modern lithium-ion battery designed for maximum efficiency and long-lasting use. Thanks to its advanced technology, it guarantees stable operation of the golf cart even in the most demanding conditions.",
+		mainImgName: 'battery-2',
+		smallImageName: 'battery-2-sm',
+		transparentImageName: 'battery-2-transparent',
+		paymentPageLink: 'https://square.link/u/RgF0977J',
+		paymentPage: '/checkout',
+    productPageUrl: 'l-flex-10-5-kwh-ultra',
+  },
+];
+
+export { $$SubscribeForm as $, $$Advantages as a, batteriesData as b };
