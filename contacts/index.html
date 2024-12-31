@@ -1,116 +1,564 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content=""><meta name="viewport" content="width=device-width"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><!-- <link rel="stylesheet" href="./../main.scss"> --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Syne:wght@400..800&display=swap" rel="stylesheet"><meta name="generator" content="Astro v5.1.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><title>Imecar | </title><script type="module" src="/js/Layout.astro_astro_type_script_index_0_lang-1TOaBGNO.js"></script><link rel="stylesheet" href="/css/about.css">
-<style>.breadcrumbs-wrapper{padding-block:40px 55px}.breadcrumbs{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.breadcrumbs li{display:flex;gap:5px;align-items:center}.breadcrumbs li:first-child{font-size:0}.breadcrumbs li:first-child a{display:block;min-width:24px;height:24px;aspect-ratio:1/1;margin-right:20px}.breadcrumbs li:first-child a:before{content:"";background-color:var(--c-black);display:block;mask-image:var(--i-home);mask-repeat:no-repeat;mask-size:contain;mask-position:center;min-width:24px;height:24px;aspect-ratio:1}.breadcrumbs li:first-child a:before{transition:.3s ease-in-out}@media (hover: hover) and (pointer: fine){.breadcrumbs li:first-child a:hover:before{background-color:var(--c-green)}}.breadcrumbs li:not(:last-child) a{display:flex;align-items:center}.breadcrumbs li:not(:last-child) a:after{content:"";background-color:var(--c-black);display:block;mask-image:var(--i-caret-right);mask-repeat:no-repeat;mask-size:contain;mask-position:center;min-width:18px;height:18px;aspect-ratio:1/1}.breadcrumbs a{line-height:1;transition:.3s ease-in-out}@media (hover: hover) and (pointer: fine){.breadcrumbs a:hover{color:var(--c-green)}}.breadcrumbs a:not([href]){pointer-events:none}
-.contacts-page__title{text-transform:uppercase;margin-bottom:30px}.contacts-page__inner{padding-block:75px}@media (max-width: 768px){.contacts-page__inner{padding-block:40px}}.contacts-page__list{background-color:#fff;padding-block:70px}@media (max-width: 768px){.contacts-page__list{padding-block:40px}}.contacts-page__address{display:grid;grid-template-columns:repeat(3,315px);justify-content:space-between;max-width:1145px;width:100%;text-align:center;margin-inline:auto}@media (max-width: 992px){.contacts-page__address{grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:30px 15px}}.contacts-page__subtitle{display:grid;gap:20px;justify-items:center;margin-bottom:10px}.contacts-page__subtitle:before{content:"";background-color:var(--c-green);display:block;mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='50' fill='none'%3E%3Cpath fill='%236BD340' d='M25.5 4.164c-9.166 0-16.666 7.5-16.666 16.667 0 11.25 14.583 23.958 15.208 24.583.417.208 1.042.417 1.459.417.416 0 1.041-.209 1.458-.417.625-.625 15.208-13.333 15.208-24.583 0-9.167-7.5-16.667-16.666-16.667Zm0 36.875C21.127 36.872 13 27.914 13 20.831c0-6.875 5.626-12.5 12.5-12.5 6.876 0 12.5 5.625 12.5 12.5s-8.124 16.041-12.5 20.208Zm0-28.542c-4.583 0-8.333 3.75-8.333 8.334 0 4.583 3.75 8.333 8.334 8.333 4.583 0 8.333-3.75 8.333-8.333 0-4.584-3.75-8.334-8.333-8.334Zm0 12.5a4.179 4.179 0 0 1-4.166-4.166 4.179 4.179 0 0 1 4.167-4.167 4.179 4.179 0 0 1 4.166 4.167 4.179 4.179 0 0 1-4.166 4.166Z'/%3E%3C/svg%3E");mask-repeat:no-repeat;mask-size:contain;mask-position:center;min-width:50px;height:50px;aspect-ratio:1}.contacts-page__text,.contacts-page__link{font-weight:300;text-align:center}.contacts-page__col--phone .contacts-page__subtitle:before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='50' fill='none'%3E%3Cpath fill='%236BD340' d='M46.333 12.503a4.179 4.179 0 0 0-4.167-4.167H8.833a4.179 4.179 0 0 0-4.167 4.167v25a4.179 4.179 0 0 0 4.167 4.166h33.333a4.179 4.179 0 0 0 4.167-4.166v-25Zm-4.167 0L25.499 22.919 8.833 12.503h33.333Zm0 25H8.833V16.669l16.666 10.417 16.667-10.417v20.834Z'/%3E%3C/svg%3E")}.contacts-page__col--email .contacts-page__subtitle:before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='50' fill='none'%3E%3Cpath fill='%236BD340' fill-rule='evenodd' d='M17.526 32.977c8.01 8.01 15.433 8.888 17.612 8.969 2.634.096 5.321-2.054 6.484-4.256-1.854-2.175-4.269-3.863-6.913-5.692-1.56 1.558-3.483 4.454-6.044 3.417-1.456-.586-5.052-2.242-8.193-5.386-3.142-3.143-4.798-6.737-5.388-8.191-1.037-2.565 1.867-4.492 3.427-6.052-1.829-2.688-3.487-5.165-5.658-6.925-2.233 1.166-4.396 3.833-4.298 6.502.081 2.179.958 9.602 8.97 17.614Zm17.458 13.134c-3-.11-11.502-1.286-20.406-10.188C5.676 27.02 4.503 18.52 4.39 15.517c-.166-4.575 3.338-9.019 7.386-10.754a3.062 3.062 0 0 1 3.01.33c3.35 2.445 5.66 6.147 7.646 9.047a3.133 3.133 0 0 1-.369 3.985l-2.825 2.827c.657 1.448 1.992 3.944 4.18 6.131 2.187 2.188 4.683 3.523 6.133 4.18l2.823-2.825a3.125 3.125 0 0 1 3.996-.357c2.958 2.05 6.433 4.327 8.966 7.571a3.063 3.063 0 0 1 .394 3.094c-1.744 4.069-6.156 7.533-10.746 7.365Z' clip-rule='evenodd'/%3E%3C/svg%3E")}#map[data-astro-cid-3bzoa6am]{height:580px;width:100%;max-width:2000px;margin-inline:auto}#map[data-astro-cid-3bzoa6am] div[data-astro-cid-3bzoa6am].gm-style>div[data-astro-cid-3bzoa6am]:not(:first-child){opacity:0!important;transition:opacity .3s ease-in-out}#map[data-astro-cid-3bzoa6am]:hover div[data-astro-cid-3bzoa6am].gm-style>div[data-astro-cid-3bzoa6am]:not(:first-child){opacity:1}
-</style></head> <body class="contacts-page"> <div class="main-content"> <div class="main-wrapper"> <header class="header"> <div class="container"> <div class="header-container"> <nav class="header-nav"> <a href="/" class="logo"> <img class="logo-img" src="/images/logo.svg" alt="logotype" width="214" height="54"> </a> <button class="burger"> <span class="burger-line"></span> </button> <script type="module">const t=()=>{const e=document.querySelector(".burger"),c=document.querySelector(".header-menu"),s=document.querySelector("body");e?.addEventListener("click",()=>{e?.classList.toggle("is-active"),c?.classList.toggle("is-active"),s?.classList.toggle("lock")})};t();document.addEventListener("astro:after-swap",t);</script> <ul class="menu header-menu"> <li class="menu-item"> <a class="menu-link " href="/#batteries"> Batteries </a> </li><li class="menu-item"> <a class="menu-link " href="/about"> About us </a> </li><li class="menu-item"> <a class="menu-link current" href="/contacts"> Contacts </a> </li> </ul> <div class="actions">  <div class="cart-wrapper"> <button class="cart-btn"> <span class="sr-only">Cart</span> <span class="cart-btn__counter" data-cart-counter="0">0</span> </button> <script type="module">document.addEventListener("click",e=>{e.target.matches(".cart-btn")&&(document.querySelector(".cart")?.classList.add("is-active"),document.querySelector("body")?.classList.add("lock")),e.target.matches("[data-cart-close]")&&(document.querySelector(".cart")?.classList.remove("is-active"),document.querySelector("body")?.classList.remove("lock"))});</script> <section class="cart"> <div class="cart__inner"> <div class="cart-head"> <h2 class="cart-head__title">Cart(<span data-cart-counter="0">0</span>)</h2> <button class="cart-head__close" data-cart-close type="button"> <div class="sr-only">Close cart</div> </button> </div> <div class="cart-body"> <ul class="cart-body__list"></ul> </div> <div class="cart-footer"> <div class="cart-subtotal"> <h3 class="cart-subtotal__title">Subtotal</h3> <div class="cart-subtotal__sum">$<span class="cart-subtotal__sum-value" data-cart-total="0">0</span> </div> </div> <div class="cart-actions"> <a href="/checkout" class="btn cart-actions__place-order">Place an order</a> <button class="btn cart-actions__close" data-cart-close>Continue shopping</button> </div> </div> </div> <div class="cart__inner empty"> <div class="cart-head"> <h2 class="cart-head__title">Cart(<span data-cart-counter="0">0</span>)</h2> <button class="cart-head__close" data-cart-close type="button"> <div class="sr-only">Close cart</div> </button> </div> <div class="cart-empty-text">Your cart is empty</div> </div> </section> </div> </div> </nav> </div> </div> </header> <script type="module">const e=document.querySelector(".header");window.addEventListener("scroll",()=>{window.scrollY>0?e?.classList.add("is-active"):e?.classList.remove("is-active")});</script>  <div class="breadcrumbs-wrapper"> <div class="container"> <ul class="breadcrumbs"> <li> <a href="/">Home</a> </li> <li> <a>Contacts</a> </li> </ul> </div> </div> <section class="contacts-page__section" data-astro-cid-3bzoa6am> <div class="container" data-astro-cid-3bzoa6am> <h1 class="contacts-page__title title-h2 text-center" data-astro-cid-3bzoa6am>contacts</h1> </div> <div class="map" id="map" data-astro-cid-3bzoa6am>place for map</div> <div class="contacts-page__inner" data-astro-cid-3bzoa6am> <h2 class="sr-only" data-astro-cid-3bzoa6am>contacts page information</h2> <div class="contacts-page__list" data-astro-cid-3bzoa6am> <div class="container" data-astro-cid-3bzoa6am> <address class="contacts-page__address" data-astro-cid-3bzoa6am> <div class="contacts-page__col contacts-page__col--place" data-astro-cid-3bzoa6am> <h3 class="contacts-page__subtitle title-h3" data-astro-cid-3bzoa6am>Miami / USA</h3> <p class="contacts-page__text" data-astro-cid-3bzoa6am>
-1200 Brickell Avenue, Suite 1950 #1073 Miami, FL 33131
-</p> </div> <div class="contacts-page__col contacts-page__col--phone" data-astro-cid-3bzoa6am> <h3 class="contacts-page__subtitle title-h3" data-astro-cid-3bzoa6am>Phone</h3> <a href="tel:17865753530" class="contacts-page__link">+1 (786) 575-3530</a> </div> <div class="contacts-page__col contacts-page__col--email" data-astro-cid-3bzoa6am> <h3 class="contacts-page__subtitle title-h3" data-astro-cid-3bzoa6am>E-mail</h3> <a href="mailto:usa@imecar.com" class="contacts-page__link">usa@imecar.com</a> </div> </address> </div> </div> </div> </section> <script type="module">
-  window.initMap = function () {
-    const mapStyles = [
-  {
-    featureType: 'water',
-    elementType: 'geometry.fill',
-    stylers: [{ color: '#7F7F7A' }]
-  },
-  {
-    featureType: 'water',
-    elementType: 'labels.text.fill',
-    stylers: [{ color: '#373737' }]
-  },
-  {
-    featureType: 'landscape',
-    elementType: 'geometry.fill',
-    stylers: [{ color: '#656565' }]
-  },
-  {
-    featureType: 'landscape',
-    elementType: 'geometry',
-    stylers: [
-      { color: '#E7E7E7' },
-      { lightness: 10 }
-    ]
-  },
-  {
-    featureType: 'administrative.country',
-    elementType: 'geometry.stroke',
-    stylers: [{ color: '#545454' }]
-  },
-  {
-    featureType: 'administrative.province',
-    stylers: [{ visibility: 'off' }]
-  },
-  {
-    featureType: 'administrative.locality',
-    stylers: [{ visibility: 'off' }]
-  },
-  {
-    featureType: 'administrative.neighborhood',
-    stylers: [{ visibility: 'off' }]
-  },
-  {
-    featureType: 'road',
-    stylers: [{ visibility: 'off' }]
-  },
-  {
-    featureType: 'poi',
-    stylers: [{ visibility: 'off' }]
-  },
-  {
-    featureType: 'transit',
-    stylers: [{ visibility: 'off' }]
-  },
-];
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="stylesheet" href="./../main.scss"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content="Astro v5.1.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Imecar |</title>
+    <script type="module" src="/js/Layout.astro_astro_type_script_index_0_lang-1TOaBGNO.js"></script>
+    <link rel="stylesheet" href="./css/about.css" />
+    <style>
+      .breadcrumbs-wrapper {
+        padding-block: 40px 55px;
+      }
+      .breadcrumbs {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .breadcrumbs li {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      .breadcrumbs li:first-child {
+        font-size: 0;
+      }
+      .breadcrumbs li:first-child a {
+        display: block;
+        min-width: 24px;
+        height: 24px;
+        aspect-ratio: 1/1;
+        margin-right: 20px;
+      }
+      .breadcrumbs li:first-child a:before {
+        content: "";
+        background-color: var(--c-black);
+        display: block;
+        mask-image: var(--i-home);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        min-width: 24px;
+        height: 24px;
+        aspect-ratio: 1;
+      }
+      .breadcrumbs li:first-child a:before {
+        transition: 0.3s ease-in-out;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .breadcrumbs li:first-child a:hover:before {
+          background-color: var(--c-green);
+        }
+      }
+      .breadcrumbs li:not(:last-child) a {
+        display: flex;
+        align-items: center;
+      }
+      .breadcrumbs li:not(:last-child) a:after {
+        content: "";
+        background-color: var(--c-black);
+        display: block;
+        mask-image: var(--i-caret-right);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        min-width: 18px;
+        height: 18px;
+        aspect-ratio: 1/1;
+      }
+      .breadcrumbs a {
+        line-height: 1;
+        transition: 0.3s ease-in-out;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .breadcrumbs a:hover {
+          color: var(--c-green);
+        }
+      }
+      .breadcrumbs a:not([href]) {
+        pointer-events: none;
+      }
+      .contacts-page__title {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      .contacts-page__inner {
+        padding-block: 75px;
+      }
+      @media (max-width: 768px) {
+        .contacts-page__inner {
+          padding-block: 40px;
+        }
+      }
+      .contacts-page__list {
+        background-color: #fff;
+        padding-block: 70px;
+      }
+      @media (max-width: 768px) {
+        .contacts-page__list {
+          padding-block: 40px;
+        }
+      }
+      .contacts-page__address {
+        display: grid;
+        grid-template-columns: repeat(3, 315px);
+        justify-content: space-between;
+        max-width: 1145px;
+        width: 100%;
+        text-align: center;
+        margin-inline: auto;
+      }
+      @media (max-width: 992px) {
+        .contacts-page__address {
+          grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+          gap: 30px 15px;
+        }
+      }
+      .contacts-page__subtitle {
+        display: grid;
+        gap: 20px;
+        justify-items: center;
+        margin-bottom: 10px;
+      }
+      .contacts-page__subtitle:before {
+        content: "";
+        background-color: var(--c-green);
+        display: block;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='50' fill='none'%3E%3Cpath fill='%236BD340' d='M25.5 4.164c-9.166 0-16.666 7.5-16.666 16.667 0 11.25 14.583 23.958 15.208 24.583.417.208 1.042.417 1.459.417.416 0 1.041-.209 1.458-.417.625-.625 15.208-13.333 15.208-24.583 0-9.167-7.5-16.667-16.666-16.667Zm0 36.875C21.127 36.872 13 27.914 13 20.831c0-6.875 5.626-12.5 12.5-12.5 6.876 0 12.5 5.625 12.5 12.5s-8.124 16.041-12.5 20.208Zm0-28.542c-4.583 0-8.333 3.75-8.333 8.334 0 4.583 3.75 8.333 8.334 8.333 4.583 0 8.333-3.75 8.333-8.333 0-4.584-3.75-8.334-8.333-8.334Zm0 12.5a4.179 4.179 0 0 1-4.166-4.166 4.179 4.179 0 0 1 4.167-4.167 4.179 4.179 0 0 1 4.166 4.167 4.179 4.179 0 0 1-4.166 4.166Z'/%3E%3C/svg%3E");
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        min-width: 50px;
+        height: 50px;
+        aspect-ratio: 1;
+      }
+      .contacts-page__text,
+      .contacts-page__link {
+        font-weight: 300;
+        text-align: center;
+      }
+      .contacts-page__col--phone .contacts-page__subtitle:before {
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='50' fill='none'%3E%3Cpath fill='%236BD340' d='M46.333 12.503a4.179 4.179 0 0 0-4.167-4.167H8.833a4.179 4.179 0 0 0-4.167 4.167v25a4.179 4.179 0 0 0 4.167 4.166h33.333a4.179 4.179 0 0 0 4.167-4.166v-25Zm-4.167 0L25.499 22.919 8.833 12.503h33.333Zm0 25H8.833V16.669l16.666 10.417 16.667-10.417v20.834Z'/%3E%3C/svg%3E");
+      }
+      .contacts-page__col--email .contacts-page__subtitle:before {
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='50' fill='none'%3E%3Cpath fill='%236BD340' fill-rule='evenodd' d='M17.526 32.977c8.01 8.01 15.433 8.888 17.612 8.969 2.634.096 5.321-2.054 6.484-4.256-1.854-2.175-4.269-3.863-6.913-5.692-1.56 1.558-3.483 4.454-6.044 3.417-1.456-.586-5.052-2.242-8.193-5.386-3.142-3.143-4.798-6.737-5.388-8.191-1.037-2.565 1.867-4.492 3.427-6.052-1.829-2.688-3.487-5.165-5.658-6.925-2.233 1.166-4.396 3.833-4.298 6.502.081 2.179.958 9.602 8.97 17.614Zm17.458 13.134c-3-.11-11.502-1.286-20.406-10.188C5.676 27.02 4.503 18.52 4.39 15.517c-.166-4.575 3.338-9.019 7.386-10.754a3.062 3.062 0 0 1 3.01.33c3.35 2.445 5.66 6.147 7.646 9.047a3.133 3.133 0 0 1-.369 3.985l-2.825 2.827c.657 1.448 1.992 3.944 4.18 6.131 2.187 2.188 4.683 3.523 6.133 4.18l2.823-2.825a3.125 3.125 0 0 1 3.996-.357c2.958 2.05 6.433 4.327 8.966 7.571a3.063 3.063 0 0 1 .394 3.094c-1.744 4.069-6.156 7.533-10.746 7.365Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      }
+      #map[data-astro-cid-3bzoa6am] {
+        height: 580px;
+        width: 100%;
+        max-width: 2000px;
+        margin-inline: auto;
+      }
+      #map[data-astro-cid-3bzoa6am]
+        div[data-astro-cid-3bzoa6am].gm-style
+        > div[data-astro-cid-3bzoa6am]:not(:first-child) {
+        opacity: 0 !important;
+        transition: opacity 0.3s ease-in-out;
+      }
+      #map[data-astro-cid-3bzoa6am]:hover
+        div[data-astro-cid-3bzoa6am].gm-style
+        > div[data-astro-cid-3bzoa6am]:not(:first-child) {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="contacts-page">
+    <div class="main-content">
+      <div class="main-wrapper">
+        <header class="header">
+          <div class="container">
+            <div class="header-container">
+              <nav class="header-nav">
+                <a href="/" class="logo">
+                  <img class="logo-img" src="/images/logo.svg" alt="logotype" width="214" height="54" />
+                </a>
+                <button class="burger"><span class="burger-line"></span></button>
+                <script type="module">
+                  const t = () => {
+                    const e = document.querySelector(".burger"),
+                      c = document.querySelector(".header-menu"),
+                      s = document.querySelector("body");
+                    e?.addEventListener("click", () => {
+                      e?.classList.toggle("is-active"), c?.classList.toggle("is-active"), s?.classList.toggle("lock");
+                    });
+                  };
+                  t();
+                  document.addEventListener("astro:after-swap", t);
+                </script>
+                <ul class="menu header-menu">
+                  <li class="menu-item"><a class="menu-link" href="/#batteries"> Batteries </a></li>
+                  <li class="menu-item"><a class="menu-link" href="/about"> About us </a></li>
+                  <li class="menu-item"><a class="menu-link current" href="/contacts"> Contacts </a></li>
+                </ul>
+                <div class="actions">
+                  <div class="cart-wrapper">
+                    <button class="cart-btn">
+                      <span class="sr-only">Cart</span> <span class="cart-btn__counter" data-cart-counter="0">0</span>
+                    </button>
+                    <script type="module">
+                      document.addEventListener("click", (e) => {
+                        e.target.matches(".cart-btn") &&
+                          (document.querySelector(".cart")?.classList.add("is-active"),
+                          document.querySelector("body")?.classList.add("lock")),
+                          e.target.matches("[data-cart-close]") &&
+                            (document.querySelector(".cart")?.classList.remove("is-active"),
+                            document.querySelector("body")?.classList.remove("lock"));
+                      });
+                    </script>
+                    <section class="cart">
+                      <div class="cart__inner">
+                        <div class="cart-head">
+                          <h2 class="cart-head__title">Cart(<span data-cart-counter="0">0</span>)</h2>
+                          <button class="cart-head__close" data-cart-close type="button">
+                            <div class="sr-only">Close cart</div>
+                          </button>
+                        </div>
+                        <div class="cart-body"><ul class="cart-body__list"></ul></div>
+                        <div class="cart-footer">
+                          <div class="cart-subtotal">
+                            <h3 class="cart-subtotal__title">Subtotal</h3>
+                            <div class="cart-subtotal__sum">
+                              $<span class="cart-subtotal__sum-value" data-cart-total="0">0</span>
+                            </div>
+                          </div>
+                          <div class="cart-actions">
+                            <a href="/checkout" class="btn cart-actions__place-order">Place an order</a>
+                            <button class="btn cart-actions__close" data-cart-close>Continue shopping</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart__inner empty">
+                        <div class="cart-head">
+                          <h2 class="cart-head__title">Cart(<span data-cart-counter="0">0</span>)</h2>
+                          <button class="cart-head__close" data-cart-close type="button">
+                            <div class="sr-only">Close cart</div>
+                          </button>
+                        </div>
+                        <div class="cart-empty-text">Your cart is empty</div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <script type="module">
+          const e = document.querySelector(".header");
+          window.addEventListener("scroll", () => {
+            window.scrollY > 0 ? e?.classList.add("is-active") : e?.classList.remove("is-active");
+          });
+        </script>
+        <div class="breadcrumbs-wrapper">
+          <div class="container">
+            <ul class="breadcrumbs">
+              <li><a href="/">Home</a></li>
+              <li><a>Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+        <section class="contacts-page__section" data-astro-cid-3bzoa6am>
+          <div class="container" data-astro-cid-3bzoa6am>
+            <h1 class="contacts-page__title title-h2 text-center" data-astro-cid-3bzoa6am>contacts</h1>
+          </div>
+          <div class="map" id="map" data-astro-cid-3bzoa6am>place for map</div>
+          <div class="contacts-page__inner" data-astro-cid-3bzoa6am>
+            <h2 class="sr-only" data-astro-cid-3bzoa6am>contacts page information</h2>
+            <div class="contacts-page__list" data-astro-cid-3bzoa6am>
+              <div class="container" data-astro-cid-3bzoa6am>
+                <address class="contacts-page__address" data-astro-cid-3bzoa6am>
+                  <div class="contacts-page__col contacts-page__col--place" data-astro-cid-3bzoa6am>
+                    <h3 class="contacts-page__subtitle title-h3" data-astro-cid-3bzoa6am>Miami / USA</h3>
+                    <p class="contacts-page__text" data-astro-cid-3bzoa6am>
+                      1200 Brickell Avenue, Suite 1950 #1073 Miami, FL 33131
+                    </p>
+                  </div>
+                  <div class="contacts-page__col contacts-page__col--phone" data-astro-cid-3bzoa6am>
+                    <h3 class="contacts-page__subtitle title-h3" data-astro-cid-3bzoa6am>Phone</h3>
+                    <a href="tel:17865753530" class="contacts-page__link">+1 (786) 575-3530</a>
+                  </div>
+                  <div class="contacts-page__col contacts-page__col--email" data-astro-cid-3bzoa6am>
+                    <h3 class="contacts-page__subtitle title-h3" data-astro-cid-3bzoa6am>E-mail</h3>
+                    <a href="mailto:usa@imecar.com" class="contacts-page__link">usa@imecar.com</a>
+                  </div>
+                </address>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script type="module">
+          window.initMap = function () {
+            const mapStyles = [
+              {
+                featureType: "water",
+                elementType: "geometry.fill",
+                stylers: [{ color: "#7F7F7A" }],
+              },
+              {
+                featureType: "water",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#373737" }],
+              },
+              {
+                featureType: "landscape",
+                elementType: "geometry.fill",
+                stylers: [{ color: "#656565" }],
+              },
+              {
+                featureType: "landscape",
+                elementType: "geometry",
+                stylers: [{ color: "#E7E7E7" }, { lightness: 10 }],
+              },
+              {
+                featureType: "administrative.country",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#545454" }],
+              },
+              {
+                featureType: "administrative.province",
+                stylers: [{ visibility: "off" }],
+              },
+              {
+                featureType: "administrative.locality",
+                stylers: [{ visibility: "off" }],
+              },
+              {
+                featureType: "administrative.neighborhood",
+                stylers: [{ visibility: "off" }],
+              },
+              {
+                featureType: "road",
+                stylers: [{ visibility: "off" }],
+              },
+              {
+                featureType: "poi",
+                stylers: [{ visibility: "off" }],
+              },
+              {
+                featureType: "transit",
+                stylers: [{ visibility: "off" }],
+              },
+            ];
 
-let centerCoordinates;
-let mapZoom;
+            let centerCoordinates;
+            let mapZoom;
 
-  if (window.innerWidth <= 768) {
-    // Наприклад, для мобільних пристроїв
-    centerCoordinates = { lat: 20.0, lng: -30.0 };
-    mapZoom = 2
-  } else if (window.innerWidth <= 1024) {
-    // Для планшетів
-    mapZoom = 2;
-    centerCoordinates = { lat: 30.0, lng: -40.0 };
-  } else {
-    // Для десктопів
-    mapZoom = 3
-    centerCoordinates = { lat: 35.0, lng: -14.0 };
-  }
+            if (window.innerWidth <= 768) {
+              // Наприклад, для мобільних пристроїв
+              centerCoordinates = { lat: 20.0, lng: -30.0 };
+              mapZoom = 2;
+            } else if (window.innerWidth <= 1024) {
+              // Для планшетів
+              mapZoom = 2;
+              centerCoordinates = { lat: 30.0, lng: -40.0 };
+            } else {
+              // Для десктопів
+              mapZoom = 3;
+              centerCoordinates = { lat: 35.0, lng: -14.0 };
+            }
 
-    const map = new google.maps.Map(document.getElementById('map'), {
-      center: centerCoordinates,
-      zoom: mapZoom,
-      styles: mapStyles,
-      // mapTypeControl: false,      
-      // zoomControl: false,          
-      // streetViewControl: false,   
-      // fullscreenControl: false, 
-      keyboardShortcuts: false,
-      disableDefaultUI: true,
-      // mapTypeControl: false
-    });
-    const locations = [
-      { lat: 51.538397, lng: -0.152886 },
-      { lat: 36.825727, lng: 30.403068 },
-      { lat: 37.090104, lng: 30.614803 },
-      { lat: 25.762172, lng: -80.192446 },
-    ];
+            const map = new google.maps.Map(document.getElementById("map"), {
+              center: centerCoordinates,
+              zoom: mapZoom,
+              styles: mapStyles,
+              // mapTypeControl: false,
+              // zoomControl: false,
+              // streetViewControl: false,
+              // fullscreenControl: false,
+              keyboardShortcuts: false,
+              disableDefaultUI: true,
+              // mapTypeControl: false
+            });
+            const locations = [
+              { lat: 51.538397, lng: -0.152886 },
+              { lat: 36.825727, lng: 30.403068 },
+              { lat: 37.090104, lng: 30.614803 },
+              { lat: 25.762172, lng: -80.192446 },
+            ];
 
-    const mapIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='41' fill='none'%3E%3Cpath fill='%236BD340' d='M4.979 4.996c3.255-3.206 7.64-5 12.208-4.996 4.575 0 8.967 1.794 12.209 4.996 2.935 2.896 4.464 6.137 4.868 9.504.402 3.337-.316 6.688-1.687 9.83-2.72 6.25-8.13 11.933-13.317 15.63a3.562 3.562 0 0 1-4.146 0C9.927 36.263 4.52 30.577 1.796 24.33.427 21.187-.29 17.837.11 14.497c.404-3.365 1.934-6.604 4.869-9.502Zm6.48 11.15a5.73 5.73 0 1 1 11.458 0 5.73 5.73 0 0 1-11.459 0Z'/%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M17.187 9.642a1.254 1.254 0 0 0-1.749.087L3.505 22.752a1.214 1.214 0 0 0 .089 1.726c.505.45 1.292.412 1.748-.087l11.933-13.023a1.214 1.214 0 0 0-.088-1.726Z' clip-rule='evenodd'/%3E%3Cpath fill='%23fff' d='m25.182 10.483-.005-.048a1.196 1.196 0 0 0-.028-.186c-.004-.018-.011-.034-.016-.052a1.2 1.2 0 0 0-.059-.164c-.013-.03-.031-.057-.047-.086-.022-.038-.042-.077-.068-.113-.024-.034-.053-.066-.082-.098-.024-.027-.047-.056-.074-.08-.009-.01-.016-.02-.026-.03-.025-.022-.053-.037-.08-.057-.028-.022-.055-.043-.085-.062a1.24 1.24 0 0 0-.12-.064c-.032-.016-.064-.032-.098-.045a1.238 1.238 0 0 0-.12-.037 1.212 1.212 0 0 0-.115-.028c-.042-.007-.083-.01-.125-.012-.026-.002-.051-.008-.078-.008h-.011l-.03.003c-.043 0-.087.007-.13.013-.037.005-.073.007-.108.015-.05.011-.1.029-.148.046-.024.009-.05.015-.073.025-.06.026-.116.058-.171.092l-.032.019a1.22 1.22 0 0 0-.156.127c-.01.009-.02.016-.028.025-.013.013-.028.022-.04.036L11.096 22.737a1.214 1.214 0 0 0 .088 1.725c.506.451 1.292.412 1.75-.086l9.36-10.217.041-.045c.101-.104.356-.325.376.067v13.91c0 .672.557 1.221 1.238 1.221.681 0 1.238-.55 1.238-1.221V10.534c0-.017-.004-.034-.005-.051Z'/%3E%3C/svg%3E"
+            const mapIcon =
+              "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='41' fill='none'%3E%3Cpath fill='%236BD340' d='M4.979 4.996c3.255-3.206 7.64-5 12.208-4.996 4.575 0 8.967 1.794 12.209 4.996 2.935 2.896 4.464 6.137 4.868 9.504.402 3.337-.316 6.688-1.687 9.83-2.72 6.25-8.13 11.933-13.317 15.63a3.562 3.562 0 0 1-4.146 0C9.927 36.263 4.52 30.577 1.796 24.33.427 21.187-.29 17.837.11 14.497c.404-3.365 1.934-6.604 4.869-9.502Zm6.48 11.15a5.73 5.73 0 1 1 11.458 0 5.73 5.73 0 0 1-11.459 0Z'/%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M17.187 9.642a1.254 1.254 0 0 0-1.749.087L3.505 22.752a1.214 1.214 0 0 0 .089 1.726c.505.45 1.292.412 1.748-.087l11.933-13.023a1.214 1.214 0 0 0-.088-1.726Z' clip-rule='evenodd'/%3E%3Cpath fill='%23fff' d='m25.182 10.483-.005-.048a1.196 1.196 0 0 0-.028-.186c-.004-.018-.011-.034-.016-.052a1.2 1.2 0 0 0-.059-.164c-.013-.03-.031-.057-.047-.086-.022-.038-.042-.077-.068-.113-.024-.034-.053-.066-.082-.098-.024-.027-.047-.056-.074-.08-.009-.01-.016-.02-.026-.03-.025-.022-.053-.037-.08-.057-.028-.022-.055-.043-.085-.062a1.24 1.24 0 0 0-.12-.064c-.032-.016-.064-.032-.098-.045a1.238 1.238 0 0 0-.12-.037 1.212 1.212 0 0 0-.115-.028c-.042-.007-.083-.01-.125-.012-.026-.002-.051-.008-.078-.008h-.011l-.03.003c-.043 0-.087.007-.13.013-.037.005-.073.007-.108.015-.05.011-.1.029-.148.046-.024.009-.05.015-.073.025-.06.026-.116.058-.171.092l-.032.019a1.22 1.22 0 0 0-.156.127c-.01.009-.02.016-.028.025-.013.013-.028.022-.04.036L11.096 22.737a1.214 1.214 0 0 0 .088 1.725c.506.451 1.292.412 1.75-.086l9.36-10.217.041-.045c.101-.104.356-.325.376.067v13.91c0 .672.557 1.221 1.238 1.221.681 0 1.238-.55 1.238-1.221V10.534c0-.017-.004-.034-.005-.051Z'/%3E%3C/svg%3E";
 
-    const customIcon = {
-      url: mapIcon, // Шлях до вашого зображення
-      scaledSize: new google.maps.Size(34, 40), // Розмір зображення
-      origin: new google.maps.Point(0, 0), // Початок
-      anchor: new google.maps.Point(20, 40), // Точка прив'язки
-    };
+            const customIcon = {
+              url: mapIcon, // Шлях до вашого зображення
+              scaledSize: new google.maps.Size(34, 40), // Розмір зображення
+              origin: new google.maps.Point(0, 0), // Початок
+              anchor: new google.maps.Point(20, 40), // Точка прив'язки
+            };
 
-    locations.forEach((location) => {
-      new google.maps.Marker({ 
-        position: location, 
-        map: map,
-        icon: customIcon 
-      });
-    });
-  };
-</script> <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMHZmVcQkETTJ0449OR8Y8sIM4ro4WENQ&callback=initMap&language=en" defer></script>  <footer class="footer"> <section> <h2 class="sr-only">Contact information</h2> <div class="container"> <div class="footer__top"> <a href="/" class="logo"> <img class="logo-img" src="/images/logo.svg" alt="logotype" width="214" height="54"> </a> <nav class="footer__section footer__section--menu"> <h3 class="footer__title">Menu</h3> <ul class="footer__list"> <li class="footer__item"> <a href="/batteries" class="footer__link">Batteries</a> </li> <li class="footer__item"> <a href="/about" class="footer__link">About us</a> </li> <li class="footer__item"> <a href="/contacts" class="footer__link">Contacts</a> </li> </ul> </nav> <div class="footer__section footer__section--contact"> <h3 class="footer__title">Contact us</h3> <address class="footer__contact-info footer__list"> <p class="footer__text"> Imecar LLC </p> <a href="tel:17865753530" class="footer__link">+1 (786) 575-3530</a> <a href="mailto:usa@imecar.com" class="footer__link">usa@imecar.com</a> </address> </div> <div class="footer__section footer__section--social"> <h3 class="footer__title">Follow us</h3> <ul class="social undefined"> <li> <a class="social-link fb" href="https://www.facebook.com/profile.php?id=100063638660638&locale=tr_TR" target="_blank"> <span class="sr-only">Go to our Facebook page</span> </a> </li> <li> <a class="social-link instagram" href="https://www.instagram.com/imecar/" target="_blank"> <span class="sr-only">Go to our Instagram page</span> </a> </li> <li> <a class="social-link twitter" href="https://twitter.com/ImecarElektron1" target="_blank"> <span class="sr-only">Go to our Twitter(X) page</span> </a> </li> <li> <a class="social-link youtube" href="https://www.youtube.com/c/ImecarElektronik" target="_blank"> <span class="sr-only">Go to our YouTube channel</span> </a> </li> </ul> <div class="footer__section footer__section--payment show-xl"> <h3 class="footer__title">Payment methods</h3> <ul class="footer__payment-list"> <li class="footer__payment-item"> <img src="/images/icons/icon-paypal.svg" alt="Paypal payment logo" width="40" height="40" loading="lazy"> </li> <li class="footer__payment-item"> <img src="/images/icons/icon-visa.svg" alt="Visa payment logo" width="40" height="40" loading="lazy"> </li> <li class="footer__payment-item"> <img src="/images/icons/icon-mc.svg" alt="MasterCard payment logo" width="40" height="40" loading="lazy"> </li> <li class="footer__payment-item"> <img src="/images/icons/icon-stripe.svg" alt="Stripe payment logo" width="40" height="40" loading="lazy"> </li> </ul> </div> </div> <div class="footer__section footer__section--payment hide-xl"> <h3 class="footer__title">Payment methods</h3> <ul class="footer__payment-list"> <li class="footer__payment-item"> <img src="/images/icons/icon-paypal.svg" alt="Paypal payment logo" width="40" height="40" loading="lazy"> </li> <li class="footer__payment-item"> <img src="/images/icons/icon-visa.svg" alt="Visa payment logo" width="40" height="40" loading="lazy"> </li> <li class="footer__payment-item"> <img src="/images/icons/icon-mc.svg" alt="MasterCard payment logo" width="40" height="40" loading="lazy"> </li> <li class="footer__payment-item"> <img src="/images/icons/icon-stripe.svg" alt="Stripe payment logo" width="40" height="40" loading="lazy"> </li> </ul> </div> </div> <div class="footer__hr"><div class="line"></div></div> <div class="footer__bottom"> <p class="footer__copyright">Imecar Electronics © 2024.</p> <p class="footer__rights">All Rights Reserved.</p> </div> </div> </section> </footer> </div> </div> </body></html>
+            locations.forEach((location) => {
+              new google.maps.Marker({
+                position: location,
+                map: map,
+                icon: customIcon,
+              });
+            });
+          };
+        </script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMHZmVcQkETTJ0449OR8Y8sIM4ro4WENQ&callback=initMap&language=en"
+          defer
+        ></script>
+        <footer class="footer">
+          <section>
+            <h2 class="sr-only">Contact information</h2>
+            <div class="container">
+              <div class="footer__top">
+                <a href="/" class="logo">
+                  <img class="logo-img" src="/images/logo.svg" alt="logotype" width="214" height="54" />
+                </a>
+                <nav class="footer__section footer__section--menu">
+                  <h3 class="footer__title">Menu</h3>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a href="/batteries" class="footer__link">Batteries</a></li>
+                    <li class="footer__item"><a href="/about" class="footer__link">About us</a></li>
+                    <li class="footer__item"><a href="/contacts" class="footer__link">Contacts</a></li>
+                  </ul>
+                </nav>
+                <div class="footer__section footer__section--contact">
+                  <h3 class="footer__title">Contact us</h3>
+                  <address class="footer__contact-info footer__list">
+                    <p class="footer__text">Imecar LLC</p>
+                    <a href="tel:17865753530" class="footer__link">+1 (786) 575-3530</a>
+                    <a href="mailto:usa@imecar.com" class="footer__link">usa@imecar.com</a>
+                  </address>
+                </div>
+                <div class="footer__section footer__section--social">
+                  <h3 class="footer__title">Follow us</h3>
+                  <ul class="social undefined">
+                    <li>
+                      <a
+                        class="social-link fb"
+                        href="https://www.facebook.com/profile.php?id=100063638660638&locale=tr_TR"
+                        target="_blank"
+                      >
+                        <span class="sr-only">Go to our Facebook page</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="social-link instagram" href="https://www.instagram.com/imecar/" target="_blank">
+                        <span class="sr-only">Go to our Instagram page</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="social-link twitter" href="https://twitter.com/ImecarElektron1" target="_blank">
+                        <span class="sr-only">Go to our Twitter(X) page</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="social-link youtube" href="https://www.youtube.com/c/ImecarElektronik" target="_blank">
+                        <span class="sr-only">Go to our YouTube channel</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="footer__section footer__section--payment show-xl">
+                    <h3 class="footer__title">Payment methods</h3>
+                    <ul class="footer__payment-list">
+                      <li class="footer__payment-item">
+                        <img
+                          src="/images/icons/icon-paypal.svg"
+                          alt="Paypal payment logo"
+                          width="40"
+                          height="40"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="footer__payment-item">
+                        <img
+                          src="/images/icons/icon-visa.svg"
+                          alt="Visa payment logo"
+                          width="40"
+                          height="40"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="footer__payment-item">
+                        <img
+                          src="/images/icons/icon-mc.svg"
+                          alt="MasterCard payment logo"
+                          width="40"
+                          height="40"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="footer__payment-item">
+                        <img
+                          src="/images/icons/icon-stripe.svg"
+                          alt="Stripe payment logo"
+                          width="40"
+                          height="40"
+                          loading="lazy"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer__section footer__section--payment hide-xl">
+                  <h3 class="footer__title">Payment methods</h3>
+                  <ul class="footer__payment-list">
+                    <li class="footer__payment-item">
+                      <img
+                        src="/images/icons/icon-paypal.svg"
+                        alt="Paypal payment logo"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="footer__payment-item">
+                      <img
+                        src="/images/icons/icon-visa.svg"
+                        alt="Visa payment logo"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="footer__payment-item">
+                      <img
+                        src="/images/icons/icon-mc.svg"
+                        alt="MasterCard payment logo"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="footer__payment-item">
+                      <img
+                        src="/images/icons/icon-stripe.svg"
+                        alt="Stripe payment logo"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__hr"><div class="line"></div></div>
+              <div class="footer__bottom">
+                <p class="footer__copyright">Imecar Electronics © 2024.</p>
+                <p class="footer__rights">All Rights Reserved.</p>
+              </div>
+            </div>
+          </section>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
