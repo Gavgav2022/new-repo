@@ -21,7 +21,152 @@
     <script type="module" src="/js/Layout.astro_astro_type_script_index_0_lang-1TOaBGNO.js"></script>
     <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./css/index-1.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      .advantages {
+        padding-block: 20px;
+        background-color: var(--c-white);
+      }
+      .advantages__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+      }
+      @media (max-width: 1200px) {
+        .advantages__list {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+        }
+      }
+      @media (max-width: 992px) {
+        .advantages__list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .advantages__list {
+          grid-template-columns: 1fr;
+        }
+      }
+      .advantages__item {
+        display: grid;
+        grid-template-columns: 50px auto;
+        align-items: center;
+        gap: 20px;
+      }
+      @media (max-width: 992px) {
+        .advantages__item {
+          margin-inline: auto;
+        }
+      }
+      @media (max-width: 600px) {
+        .advantages__item {
+          margin-inline: unset;
+        }
+      }
+      .advantages__item:before {
+        content: "";
+        background-color: var(--c-green);
+        display: block;
+        mask-image: var(--i-ft-support);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        min-width: 50px;
+        height: 50px;
+        aspect-ratio: 1;
+      }
+      .advantages__item.warranty:before {
+        mask-image: var(--i-ft-warranty);
+      }
+      .advantages__item.shipping:before {
+        mask-image: var(--i-ft-shipping);
+      }
+      .advantages__item.battery:before {
+        mask-image: var(--i-ft-safest);
+      }
+      .advantages__title {
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: var(--ff-secondary);
+        margin-bottom: 6px;
+      }
+      .advantages__subtitle {
+        display: block;
+        font-weight: 300;
+      }
+      .subscribe {
+        padding-block: 150px;
+      }
+      @media (max-width: 1200px) {
+        .subscribe {
+          padding-block: 100px;
+        }
+      }
+      @media (max-width: 768px) {
+        .subscribe {
+          padding-block: 70px;
+        }
+      }
+      .subscribe__inner {
+        max-width: 690px;
+        margin-inline: auto;
+      }
+      .subscribe__title {
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      @media (max-width: 768px) {
+        .subscribe__title {
+          margin-bottom: 16px;
+        }
+      }
+      .subscribe__text {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      @media (max-width: 768px) {
+        .subscribe__text {
+          margin-bottom: 16px;
+        }
+      }
+      .form-group {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        background-color: var(--c-white);
+        border-radius: 10px;
+      }
+      @media (max-width: 600px) {
+        .form-group {
+          background-color: transparent;
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+      .subscribe__input {
+        padding: 20px;
+        outline: 0;
+      }
+      .subscribe__input::placeholder {
+        color: var(--c-black);
+      }
+      @media (max-width: 600px) {
+        .subscribe__input {
+          background-color: var(--c-white);
+          border-radius: 10px;
+        }
+      }
+      .subscribe__btn {
+        padding-block: 23px !important;
+        padding-inline: 44px;
+      }
+      @media (max-width: 600px) {
+        .subscribe__btn {
+          width: 100% !important;
+        }
+      }
+    </style>
   </head>
   <body class="home-page">
     <div class="main-content">
@@ -30,7 +175,7 @@
           <div class="container">
             <div class="header-container">
               <nav class="header-nav">
-                <a href="/" class="logo">
+                <a href="./index.html" class="logo">
                   <img class="logo-img" src="./images/logo.svg" alt="logotype" width="214" height="54" />
                 </a>
                 <button class="burger"><span class="burger-line"></span></button>
